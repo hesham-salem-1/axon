@@ -14,6 +14,7 @@ from collections.abc import Callable
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from typing import Any
+from axon.core.parsers.esql_lang import ESQLParser
 
 from axon.core.graph.graph import KnowledgeGraph
 from axon.core.graph.model import (
@@ -37,6 +38,10 @@ _KIND_TO_LABEL: dict[str, NodeLabel] = {
     "interface": NodeLabel.INTERFACE,
     "type_alias": NodeLabel.TYPE_ALIAS,
     "enum": NodeLabel.ENUM,
+    # ESQL mappings
+    "procedure": NodeLabel.PROCEDURE,
+    "module": NodeLabel.MODULE,
+    "route": NodeLabel.ROUTE,
 }
 
 
@@ -45,7 +50,10 @@ _PARSER_FACTORIES: dict[str, Callable[[], LanguageParser]] = {
     "typescript": lambda: TypeScriptParser(dialect="typescript"),
     "tsx": lambda: TypeScriptParser(dialect="tsx"),
     "javascript": lambda: TypeScriptParser(dialect="javascript"),
+    "esql": ESQLParser,
 }
+
+
 
 @dataclass
 class FileParseData:

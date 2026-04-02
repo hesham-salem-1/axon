@@ -10,12 +10,15 @@ from axon.core.graph.model import GraphNode, NodeLabel, RelType
 
 logger = logging.getLogger(__name__)
 
+
+
 _SYMBOL_LABELS: tuple[NodeLabel, ...] = (
     NodeLabel.FUNCTION,
     NodeLabel.METHOD,
     NodeLabel.CLASS,
+    NodeLabel.PROCEDURE,    # IBM ESQL
+    NodeLabel.ROUTE,        # IBM ESQL
 )
-
 _CONSTRUCTOR_NAMES: frozenset[str] = frozenset({"__init__", "__new__"})
 
 def _is_test_class(name: str) -> bool:

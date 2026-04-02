@@ -7,6 +7,9 @@ const NODE_TYPE_CONFIG: { type: string; label: string; color: string }[] = [
   { type: 'interface', label: 'Interface', color: 'var(--node-interface)' },
   { type: 'type_alias', label: 'Type Alias', color: 'var(--node-typealias)' },
   { type: 'enum', label: 'Enum', color: 'var(--node-enum)' },
+  { type: 'procedure', label: 'Procedure', color: 'var(--node-procedure)' },    // IBM ESQL
+  { type: 'module', label: 'Module', color: 'var(--node-module)' },            
+  { type: 'route', label: 'Route', color: 'var(--node-route)' },              
   { type: 'file', label: 'File', color: 'var(--node-file)' },
   { type: 'folder', label: 'Folder', color: 'var(--node-folder)' },
   { type: 'community', label: 'Community', color: 'var(--node-community)' },

@@ -11,7 +11,6 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import Any
 
-
 class NodeLabel(Enum):
     """Labels for graph nodes representing code-level entities."""
 
@@ -23,6 +22,11 @@ class NodeLabel(Enum):
     INTERFACE = "interface"
     TYPE_ALIAS = "type_alias"
     ENUM = "enum"
+    # IBM ESQL specific node types
+    PROCEDURE = "procedure"      # IBM ESQL stored procedure
+    MODULE = "module"            # IBM ESQL module (namespace)
+    ROUTE = "route"              # IBM ESQL route (message flow)
+    # Framework/Analysis nodes
     COMMUNITY = "community"
     PROCESS = "process"
 

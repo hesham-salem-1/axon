@@ -22,6 +22,9 @@ class TestNodeLabel:
         "INTERFACE",
         "TYPE_ALIAS",
         "ENUM",
+        "PROCEDURE",      # IBM ESQL
+        "MODULE",         # IBM ESQL
+        "ROUTE",          # IBM ESQL
         "COMMUNITY",
         "PROCESS",
     ]

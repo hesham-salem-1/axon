@@ -12,6 +12,9 @@ const NODE_COLORS: Record<string, { fill: string; border: string }> = {
   interface:  { fill: '#00BCD4', border: '#33D1E6' },  // cyan
   type_alias: { fill: '#B455E0', border: '#C97AEA' },  // purple
   enum:       { fill: '#E85D75', border: '#EE8093' },  // rose-pink
+  procedure:  { fill: '#FF6B6B', border: '#FF8787' },  // IBM ESQL - red
+  module:     { fill: '#FFB74D', border: '#FFCA6B' },  // IBM ESQL - orange
+  route:      { fill: '#4ECDC4', border: '#6FE2DB' },  // IBM ESQL - teal
   file:       { fill: '#8B949E', border: '#A0AAB4' },  // silver-grey
   folder:     { fill: '#D2A35C', border: '#DEBD7E' },  // warm tan
   community:  { fill: '#3FB950', border: '#5CC96A' },  // forest green

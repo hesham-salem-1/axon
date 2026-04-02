@@ -167,11 +167,15 @@ export const NODE_LABELS = [
   'interface',
   'type_alias',
   'enum',
+  'procedure',      // IBM ESQL
+  'module',         // IBM ESQL
+  'route',          // IBM ESQL
   'file',
   'folder',
   'community',
   'process',
 ] as const;
+
 export type NodeLabel = (typeof NODE_LABELS)[number];
 
 export const EDGE_TYPES = [

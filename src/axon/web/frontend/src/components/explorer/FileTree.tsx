@@ -402,7 +402,13 @@ function Badge({ children, active = false }: { children: React.ReactNode; active
 function nodeTypeAbbrev(label: string): string {
   switch (label.toLowerCase()) {
     case 'function':
-      return '\u0192';
+      return 'ƒ';
+    case 'procedure':      // IBM ESQL procedure
+      return 'P';
+    case 'route':          // IBM ESQL route
+      return 'R';
+    case 'module':         // IBM ESQL module
+      return 'M';
     case 'class':
       return 'C';
     case 'method':
@@ -426,6 +432,9 @@ function nodeTypeColor(label: string): string {
     interface: 'var(--node-interface)',
     type_alias: 'var(--node-typealias)',
     enum: 'var(--node-enum)',
+    procedure: 'var(--node-procedure)',    // IBM ESQL
+    module: 'var(--node-module)',          // IBM ESQL
+    route: 'var(--node-route)',            // IBM ESQL
   };
   return map[label.toLowerCase()] ?? 'var(--text-secondary)';
 }
